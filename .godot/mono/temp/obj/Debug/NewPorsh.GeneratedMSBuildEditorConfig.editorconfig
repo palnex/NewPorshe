@@ -1,6 +1,6 @@
 is_global = true
 build_property.GodotDisabledSourceGenerators = 
-build_property.GodotProjectDir = /Users/arturagalarian/Godot Projects/PalDevGey/NewPorshe/NewPorshh/
+build_property.GodotProjectDir = /Users/arturagalarian/Godot Projects/PalDevGey/NewPorshe/
 build_property.GodotProjectDirBase64 = 
 build_property.GodotSourceGenerators = 
 build_property.IsGodotToolsProject = 
@@ -13,4 +13,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NewPorsh
-build_property.ProjectDir = /Users/arturagalarian/Godot Projects/PalDevGey/NewPorshe/NewPorshh/
+build_property.ProjectDir = /Users/arturagalarian/Godot Projects/PalDevGey/NewPorshe/

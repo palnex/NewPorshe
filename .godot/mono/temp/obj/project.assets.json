@@ -93,11 +93,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/arturagalarian/Godot Projects/PalDevGey/NewPorshe/NewPorshh/NewPorsh.csproj",
+      "projectUniqueName": "/Users/arturagalarian/Godot Projects/PalDevGey/NewPorshe/NewPorsh.csproj",
       "projectName": "NewPorsh",
-      "projectPath": "/Users/arturagalarian/Godot Projects/PalDevGey/NewPorshe/NewPorshh/NewPorsh.csproj",
+      "projectPath": "/Users/arturagalarian/Godot Projects/PalDevGey/NewPorshe/NewPorsh.csproj",
       "packagesPath": "/Users/arturagalarian/.nuget/packages/",
-      "outputPath": "/Users/arturagalarian/Godot Projects/PalDevGey/NewPorshe/NewPorshh/.godot/mono/temp/obj/",
+      "outputPath": "/Users/arturagalarian/Godot Projects/PalDevGey/NewPorshe/.godot/mono/temp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/arturagalarian/.nuget/NuGet/NuGet.Config"
