@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "DHjJIgbnJGTPx+IRNxBoDReTINj+cIUpJEVbf+Up6AHf9wxV4sSLGlI15jO47bJjBHcqVsVE+o45OuaFF70Flg==",
+  "success": true,
+  "projectFilePath": "/Users/arturagalarian/Godot Projects/PalDevGey/NewPorshe/NewPorshh/NewPorsh.csproj",
+  "expectedPackageFiles": [
+    "/Users/arturagalarian/.nuget/packages/godot.sourcegenerators/4.2.2/godot.sourcegenerators.4.2.2.nupkg.sha512",
+    "/Users/arturagalarian/.nuget/packages/godotsharp/4.2.2/godotsharp.4.2.2.nupkg.sha512",
+    "/Users/arturagalarian/.nuget/packages/godotsharpeditor/4.2.2/godotsharpeditor.4.2.2.nupkg.sha512",
+    "/Users/arturagalarian/.nuget/packages/microsoft.netcore.app.ref/6.0.26/microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
+    "/Users/arturagalarian/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.26/microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512"
+  ],
+  "logs": []
+}
