@@ -1,0 +1,12 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1719013327
+Bg.png::CompressedTexture2D::1945481385145148383::1719009092::1719012071::1::::<><>::
+icon.svg::CompressedTexture2D::6194325083961729282::1719009092::1719012071::1::::<><>::
+new_script.cs::CSharpScript::-1::1719009092::0::1::::<>Node<>::
+pixel_font.ttf::FontFile::8916420315507340067::1719009092::1719010719::1::::<><>::
+::res://Scenes/::1719013216
+Ball.cs::CSharpScript::-1::1719012190::0::1::::<>CharacterBody2D<>::
+Hud.cs::CSharpScript::-1::1719012190::0::1::::<>CanvasLayer<>::
+main.cs::CSharpScript::-1::1719009092::0::1::::<>Sprite2D<>::
+main.tscn::PackedScene::699482600518770622::1719013216::0::1::::<><>::uid://2yn2acityo60::::res://Bg.png<>res://Scenes/main.cs<>uid://d0bge0yjrgo5p::::res://pixel_font.ttf<>res://Scenes/Player.cs<>res://Scenes/Ball.cs<>res://Scenes/Hud.cs
+Player.cs::CSharpScript::-1::1719009092::0::1::::<>StaticBody2D<>::
