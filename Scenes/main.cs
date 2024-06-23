@@ -6,7 +6,7 @@ public partial class main : Sprite2D
 {
 	// Called when the node enters the scene tree for the first time.
 
-	public static readonly int PADDLE_SPEED = 500;
+	public static int PADDLE_SPEED = 400;
 
 	public override void _Ready()
 	{
@@ -22,6 +22,6 @@ public partial class main : Sprite2D
 	}
 
 	private void OnBallTimerTimeout(){
-		GetNode<Ball>("Ball").new_ball();
+		GetNode<Ball>("Ball").New_ball();
 	}
 }
