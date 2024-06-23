@@ -1,6 +1,7 @@
 res://Scenes/main.tscn
-res://Scenes/Player.cs
-res://Scenes/Hud.cs
-res://Scenes/Ball.cs
 res://Scenes/main.cs
+res://Scenes/CPU.cs
+res://Scenes/Ball.cs
+res://Scenes/Hud.cs
 res://new_script.cs
+res://Scenes/Player.cs

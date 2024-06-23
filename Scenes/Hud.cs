@@ -16,7 +16,7 @@ public partial class Hud : CanvasLayer
 		//Retrieves the instance of the ball in ordre to subscribe to its custom made signals (aka events)
 		Ball ball = GetNode<Ball>("/root/Main/Ball");
 
-		if(playerScore != null && cpuScore != null) {
+		if(playerScore != null && cpuScore != null && ball != null) {
 
 			//Subscribing through anonymous method
 			ball.OnScoreLeft += () => {
