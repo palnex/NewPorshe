@@ -25,8 +25,8 @@ public partial class CPU : StaticBody2D
 
 		dist = (int)this.Position.Y - (int)ball_pos.Y;
 		//GD.Print(dist);
-		if (dist > main.PADDLE_SPEED * delta) {
-			mov_by = (int)((double)main.PADDLE_SPEED * delta * (dist/ Math.Abs(dist)));
+		if (dist > Main.PADDLE_SPEED * delta) {
+			mov_by = (int)((double)Main.PADDLE_SPEED * delta * (dist/ Math.Abs(dist)));
 		} else {
 			mov_by = dist;
 		}
