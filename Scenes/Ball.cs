@@ -7,18 +7,11 @@ public partial class Ball : CharacterBody2D
 	Godot.Vector2 win_size;
 	const int START_SPEED = 500;
 	const int ACCEL = 50;
+    
 	int speed;
 	Godot.Vector2 dir;
     const float MAX_Y_VECTOR = 0.6f;
-
-
-	//A custom signal
-	[Signal]
-	public delegate void OnScoreLeftEventHandler();
-	
-	//A custom signal
-	[Signal]
-	public delegate void OnScoreRightEventHandler();
+    
 
 
     public static Godot.Vector2 Random_direction(){
@@ -76,16 +69,4 @@ public partial class Ball : CharacterBody2D
             return dir.Bounce(collisionNormal.GetNormal());
         }
     }
-
-	//Listens to the BodyEntered Signal provided by Godot.
-	private void OnScoreLeftBodyEntered(Ball ball){
-		//Starts up a custom signal for subscribers to listen (aka. an event)
-		EmitSignal(SignalName.OnScoreLeft);
-	}
-
-	//Listens to the BodyEntered Signal provided by Godot.
-	private void OnScoreRightBodyEntered(Ball ball){
-		//Starts up a custom signal for subscribers to listen (aka. an event)
-		EmitSignal(SignalName.OnScoreLeft);
-	}
 }
