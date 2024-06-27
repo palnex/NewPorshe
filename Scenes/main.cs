@@ -6,6 +6,8 @@ public partial class Main : Sprite2D
 {
 	const int WIN_SCORE = 5;
 
+	private string _menu_scene_path = "res://Scene/menu.tscn";
+
 	Hud _hud = null;
 	Ball _ball = null;
 	public static int PADDLE_SPEED = 400;

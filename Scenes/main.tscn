@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://cqmlc67wsnxar"]
 
-[ext_resource type="Texture2D" path="res://Bg.png" id="1_d5oep"]
+[ext_resource type="Texture2D" uid="uid://2yn2acityo60" path="res://Bg.png" id="1_d5oep"]
 [ext_resource type="Script" path="res://Scenes/Main.cs" id="2_cn6my"]
-[ext_resource type="FontFile" path="res://pixel_font.ttf" id="2_w0k06"]
+[ext_resource type="FontFile" uid="uid://d0bge0yjrgo5p" path="res://pixel_font.ttf" id="2_w0k06"]
 [ext_resource type="Script" path="res://Scenes/Player.cs" id="3_a6rmu"]
 [ext_resource type="Script" path="res://Scenes/Ball.cs" id="4_bpbcv"]
 [ext_resource type="Script" path="res://Scenes/CPU.cs" id="4_wt14t"]
