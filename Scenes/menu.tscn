@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd8um1ggqbejg"]
+
+[ext_resource type="Script" path="res://Scenes/Menu.cs" id="1_0ywhe"]
+[ext_resource type="FontFile" uid="uid://d0bge0yjrgo5p" path="res://pixel_font.ttf" id="2_fs5qn"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_o4q6n"]
+script/source = "using Godot;
+using System;
+
+public partial class PlayButton : Button
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+}
+"
+
+[node name="Menu" type="Sprite2D"]
+position = Vector2(0, -1)
+script = ExtResource("1_0ywhe")
+
+[node name="PlayButton" type="Button" parent="."]
+offset_left = 384.0
+offset_top = 129.0
+offset_right = 597.0
+offset_bottom = 187.0
+scale = Vector2(1.8, 2.2)
+theme_override_fonts/font = ExtResource("2_fs5qn")
+theme_override_font_sizes/font_size = 50
+text = "Play"
+icon_alignment = 1
+script = SubResource("CSharpScript_o4q6n")
+theme_override_fonts/font = ExtResource("2_fs5qn")
+theme_override_font_sizes/font_size = 50
+
+[node name="ExitButton" type="Button" parent="."]
+offset_left = 384.0
+offset_top = 321.0
+offset_right = 597.0
+offset_bottom = 379.0
+scale = Vector2(1.8, 2.2)
+theme_override_fonts/font = ExtResource("2_fs5qn")
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+
+[connection signal="pressed" from="PlayButton" to="." method="OnPlayButtonPress"]
+[connection signal="pressed" from="ExitButton" to="." method="OnExitButtonPressed"]

@@ -1,8 +1,12 @@
+res://Scenes/menu.tscn
 res://Scenes/main.tscn
-res://Scenes/main.cs
-res://Scenes/CPU.cs
-res://Scenes/Ball.cs
+res://Scenes/PlayButton.cs
 res://Scenes/Hud.cs
-res://new_script.cs
-res://Scenes/Player.cs
+res://Scenes/Ball.cs
 res://Scenes/Main.cs
+res://new_script.cs
+res://Scenes/CPU.cs
+res://Scenes/Player.cs
+res://Scenes/Menu.cs
+res://Scenes/menu.cs
+res://Scenes/Pause.cs

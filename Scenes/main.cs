@@ -6,6 +6,10 @@ public partial class Main : Sprite2D
 {
 	const int WIN_SCORE = 5;
 
+	private string _menu_scene_path = "res://Scene/menu.tscn";
+	
+	private bool isPaused = false;
+
 	Hud _hud = null;
 	Ball _ball = null;
 	public static int PADDLE_SPEED = 400;
@@ -38,12 +42,24 @@ public partial class Main : Sprite2D
 
 	}
 
-	private void OnBallTimerTimeout(){
-		GetNode<Ball>("Ball").New_ball();
+
+	
+
+	//The method is ran when the signal from the menu button in the main scene is pressed
+	//More info here: https://docs.godotengine.org/en/stable/tutorials/scripting/pausing_games.html#pause-menu-example
+	private void OnPausePressed() {
+		if(isPaused) { //When resuming
+			Hide();
+			GetTree().Paused = false; 
+		} else { //When pausing (might need to be in the different method)
+			GetTree().Paused = true;
+			Show();
+		}
+		isPaused = !isPaused;
 	}
 
-	private void ScoreChange() {
-
+	private void OnBallTimerTimeout(){
+		GetNode<Ball>("Ball").New_ball();
 	}
 
     /// <summary>
