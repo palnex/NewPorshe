@@ -26,11 +26,11 @@ position = Vector2(0, -1)
 script = ExtResource("1_0ywhe")
 
 [node name="PlayButton" type="Button" parent="."]
-offset_left = 448.0
+offset_left = 384.0
 offset_top = 129.0
-offset_right = 661.0
+offset_right = 597.0
 offset_bottom = 187.0
-scale = Vector2(0.9, 2.2)
+scale = Vector2(1.8, 2.2)
 theme_override_fonts/font = ExtResource("2_fs5qn")
 theme_override_font_sizes/font_size = 50
 text = "Play"
@@ -40,11 +40,11 @@ theme_override_fonts/font = ExtResource("2_fs5qn")
 theme_override_font_sizes/font_size = 50
 
 [node name="ExitButton" type="Button" parent="."]
-offset_left = 448.0
+offset_left = 384.0
 offset_top = 321.0
-offset_right = 661.0
+offset_right = 597.0
 offset_bottom = 379.0
-scale = Vector2(0.9, 2.2)
+scale = Vector2(1.8, 2.2)
 theme_override_fonts/font = ExtResource("2_fs5qn")
 theme_override_font_sizes/font_size = 50
 text = "Quit"
