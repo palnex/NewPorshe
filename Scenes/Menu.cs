@@ -12,10 +12,6 @@ public partial class Menu : Sprite2D
 		_main_scene_path = "res://Scenes/main.tscn";
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
 
 	private void OnPlayButtonPress() {
 		GetTree().ChangeSceneToFile(_main_scene_path);
