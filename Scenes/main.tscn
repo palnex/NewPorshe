@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://Scenes/Ball.cs" id="4_bpbcv"]
 [ext_resource type="Script" path="res://Scenes/CPU.cs" id="4_wt14t"]
 [ext_resource type="Script" path="res://Scenes/Hud.cs" id="6_m5ck6"]
-[ext_resource type="Script" path="res://Scenes/Pause.cs" id="8_foy71"]
+[ext_resource type="Script" path="res://Scenes/PauseMenu.cs" id="8_ct1gg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pr4i3"]
 size = Vector2(20, 120)
@@ -135,10 +135,7 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="Hud"]
-visible = false
-
-[node name="Pause" type="Button" parent="Hud"]
+[node name="PauseButton" type="Button" parent="Hud"]
 offset_left = 551.0
 offset_top = 12.0
 offset_right = 559.0
@@ -147,7 +144,30 @@ scale = Vector2(0.251861, 0.668046)
 theme_override_fonts/font = ExtResource("2_w0k06")
 theme_override_font_sizes/font_size = 50
 text = "menu"
-script = ExtResource("8_foy71")
+
+[node name="PauseMenu" type="Sprite2D" parent="Hud"]
+process_mode = 3
+position = Vector2(576, 328)
+texture = ExtResource("1_d5oep")
+script = ExtResource("8_ct1gg")
+
+[node name="ResumeButton" type="Button" parent="Hud/PauseMenu"]
+offset_left = -152.0
+offset_top = -136.0
+offset_right = 156.0
+offset_bottom = -78.0
+theme_override_fonts/font = ExtResource("2_w0k06")
+theme_override_font_sizes/font_size = 50
+text = "Resume"
+
+[node name="MainMenuButton" type="Button" parent="Hud/PauseMenu"]
+offset_left = -224.0
+offset_top = 64.0
+offset_right = 234.0
+offset_bottom = 122.0
+theme_override_fonts/font = ExtResource("2_w0k06")
+theme_override_font_sizes/font_size = 50
+text = "Main Menu"
 
 [node name="BallTimer" type="Timer" parent="."]
 one_shot = true
@@ -155,5 +175,7 @@ autostart = true
 
 [connection signal="body_entered" from="ScoreLeft" to="." method="OnScoreLeftBodyEntered"]
 [connection signal="body_entered" from="ScoreRight" to="." method="OnScoreRightBodyEntered"]
-[connection signal="pressed" from="Hud/Pause" to="." method="OnPausePressed"]
+[connection signal="pressed" from="Hud/PauseButton" to="Hud/PauseMenu" method="OnPausePressed"]
+[connection signal="pressed" from="Hud/PauseMenu/ResumeButton" to="Hud/PauseMenu" method="OnResumePressed"]
+[connection signal="pressed" from="Hud/PauseMenu/MainMenuButton" to="Hud/PauseMenu" method="OnMainMenuPressed"]
 [connection signal="timeout" from="BallTimer" to="." method="_on_ball_timer_timeout"]

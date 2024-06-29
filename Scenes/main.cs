@@ -8,17 +8,19 @@ public partial class Main : Sprite2D
 
 	private string _menu_scene_path = "res://Scene/menu.tscn";
 	
-	private bool isPaused = false;
 
 	Hud _hud = null;
 	Ball _ball = null;
+
 	public static int PADDLE_SPEED = 400;
 
 	public override void _Ready()
 	{
 		_hud = GetNode<Hud>("/root/Main/Hud");
 		_ball = GetNode<Ball>("/root/Main/Ball");
+
 		int[] score = {0,0};
+
 		//const int PADDLE_SPEED = 500;
 		GetNode<Godot.Timer>("BallTimer").Connect("timeout", new Callable(this, nameof(OnBallTimerTimeout)));
 
@@ -34,6 +36,7 @@ public partial class Main : Sprite2D
 				_ball.New_ball();
 			}
 		};
+
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -42,21 +45,6 @@ public partial class Main : Sprite2D
 
 	}
 
-
-	
-
-	//The method is ran when the signal from the menu button in the main scene is pressed
-	//More info here: https://docs.godotengine.org/en/stable/tutorials/scripting/pausing_games.html#pause-menu-example
-	private void OnPausePressed() {
-		if(isPaused) { //When resuming
-			Hide();
-			GetTree().Paused = false; 
-		} else { //When pausing (might need to be in the different method)
-			GetTree().Paused = true;
-			Show();
-		}
-		isPaused = !isPaused;
-	}
 
 	private void OnBallTimerTimeout(){
 		GetNode<Ball>("Ball").New_ball();
