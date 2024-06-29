@@ -10,7 +10,6 @@ public partial class PauseMenu : Sprite2D
 
     public override void _Ready()
     {
-        GD.Print("Ready");
 
 		_main = GetNode<Main>("/root/Main");
 
@@ -37,5 +36,11 @@ public partial class PauseMenu : Sprite2D
 	{
 		GetTree().Paused = false;
 		GetTree().ChangeSceneToFile(_main_menu_path);
+	}
+
+	private void OnTryAgainPressed() 
+	{
+		GetTree().Paused = false;
+		GetTree().ReloadCurrentScene();
 	}
 }

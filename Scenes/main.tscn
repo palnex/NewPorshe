@@ -83,6 +83,7 @@ offset_right = 5.0
 offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
 shape = SubResource("RectangleShape2D_toymn")
@@ -147,6 +148,7 @@ text = "menu"
 
 [node name="PauseMenu" type="Sprite2D" parent="Hud"]
 process_mode = 3
+visible = false
 position = Vector2(576, 328)
 texture = ExtResource("1_d5oep")
 script = ExtResource("8_ct1gg")
@@ -169,6 +171,46 @@ theme_override_fonts/font = ExtResource("2_w0k06")
 theme_override_font_sizes/font_size = 50
 text = "Main Menu"
 
+[node name="GameOver" type="Sprite2D" parent="Hud"]
+process_mode = 3
+visible = false
+position = Vector2(576, 328)
+
+[node name="WinnerText" type="TextEdit" parent="Hud/GameOver"]
+anchors_preset = -1
+anchor_top = -208.0
+anchor_right = 512.0
+anchor_bottom = -144.0
+offset_left = 48.0
+offset_top = 56.0
+offset_right = 48.0
+offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("2_w0k06")
+theme_override_font_sizes/font_size = 50
+text = "Nothing?"
+placeholder_text = "Draw!"
+metadata/_edit_use_anchors_ = true
+
+[node name="TryAgainButton" type="Button" parent="Hud/GameOver"]
+offset_left = 48.0
+offset_right = 556.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("2_w0k06")
+theme_override_font_sizes/font_size = 50
+text = "Try Again?"
+metadata/_edit_use_anchors_ = true
+
+[node name="Main Menu" type="Button" parent="Hud/GameOver"]
+offset_left = 48.0
+offset_top = 128.0
+offset_right = 506.0
+offset_bottom = 186.0
+theme_override_fonts/font = ExtResource("2_w0k06")
+theme_override_font_sizes/font_size = 50
+text = "Main Menu
+"
+metadata/_edit_use_anchors_ = true
+
 [node name="BallTimer" type="Timer" parent="."]
 one_shot = true
 autostart = true
@@ -178,4 +220,6 @@ autostart = true
 [connection signal="pressed" from="Hud/PauseButton" to="Hud/PauseMenu" method="OnPausePressed"]
 [connection signal="pressed" from="Hud/PauseMenu/ResumeButton" to="Hud/PauseMenu" method="OnResumePressed"]
 [connection signal="pressed" from="Hud/PauseMenu/MainMenuButton" to="Hud/PauseMenu" method="OnMainMenuPressed"]
+[connection signal="pressed" from="Hud/GameOver/TryAgainButton" to="Hud/PauseMenu" method="OnTryAgainPressed"]
+[connection signal="pressed" from="Hud/GameOver/Main Menu" to="Hud/PauseMenu" method="OnMainMenuPressed"]
 [connection signal="timeout" from="BallTimer" to="." method="_on_ball_timer_timeout"]
